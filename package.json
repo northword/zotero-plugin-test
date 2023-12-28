@@ -43,6 +43,7 @@
     "esbuild": "^0.19.9",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
+    "issue-parser": "^6.0.0",
     "prettier": "^3.1.1",
     "release-it": "^17.0.1",
     "replace-in-file": "^7.0.2",
@@ -121,7 +122,7 @@
       "publish": false
     },
     "github": {
-      "release": true,
+      "release": false,
       "assets": [
         "build/*.xpi"
       ],
