@@ -121,7 +121,7 @@
       "publish": false
     },
     "github": {
-      "release": false,
+      "release": true,
       "assets": [
         "build/*.xpi"
       ],
