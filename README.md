@@ -2,8 +2,4 @@
 
 Only for test
 
-close #2
-
-close #3
-
-close: #5
+this code fixes #6
