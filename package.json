@@ -1,6 +1,6 @@
 {
   "name": "zotero-addon-test",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Zotero Addon Template",
   "config": {
     "addonName": "Zotero Addon test",
