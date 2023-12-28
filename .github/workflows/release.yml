@@ -16,7 +16,8 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GitHub_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -40,4 +41,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           comment-template: |
-            Release {release_link} addresses this.
+            :rocket: _This ticket has been resolved in {release_tag}. See {release_link} for release notes._
