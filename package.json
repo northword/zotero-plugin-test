@@ -1,15 +1,15 @@
 {
-  "name": "zotero-addon-template",
+  "name": "zotero-addon-test",
   "version": "1.1.1",
   "description": "Zotero Addon Template",
   "config": {
-    "addonName": "Zotero Addon Template",
+    "addonName": "Zotero Addon test",
     "addonID": "addontemplate@euclpts.com",
     "addonRef": "addontemplate",
     "addonInstance": "AddonTemplate",
     "prefsPrefix": "extensions.zotero.addontemplate",
-    "releasePage": "https://github.com/windingwind/zotero-addon-template/releases",
-    "updateJSON": "https://raw.githubusercontent.com/windingwind/zotero-addon-template/main/update.json"
+    "releasePage": "https://github.com/northword/zotero-addon-test/releases",
+    "updateJSON": "https://raw.githubusercontent.com/northword/zotero-addon-test/main/update.json"
   },
   "main": "src/index.ts",
   "scripts": {
@@ -23,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/windingwind/zotero-addon-template.git"
+    "url": "git+https://github.com/northword/zotero-addon-test.git"
   },
-  "author": "windingwind",
+  "author": "northword",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/windingwind/zotero-addon-template/issues"
+    "url": "https://github.com/northword/zotero-addon-test/issues"
   },
-  "homepage": "https://github.com/windingwind/zotero-addon-template#readme",
+  "homepage": "https://github.com/northword/zotero-addon-test#readme",
   "dependencies": {
     "zotero-plugin-toolkit": "^2.3.15"
   },
