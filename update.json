@@ -3,7 +3,7 @@
     "addontemplate@euclpts.com": {
       "updates": [
         {
-          "version": "2.0.3",
+          "version": "2.0.4",
           "update_link": "https://github.com/northword/zotero-addon-test/releases/latest/download/zotero-addon-test.xpi",
           "applications": {
             "zotero": {
