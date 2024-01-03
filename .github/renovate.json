@@ -5,8 +5,7 @@
     ":prHourlyLimitNone",
     ":prConcurrentLimitNone",
     ":enableVulnerabilityAlerts",
-    ":dependencyDashboard",
-    "schedule:weekends"
+    ":dependencyDashboard"
   ],
   "packageRules": [
     {
