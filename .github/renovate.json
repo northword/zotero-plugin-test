@@ -11,6 +11,7 @@
   "packageRules": [
     {
       "matchPackageNames": ["zotero-plugin-toolkit", "zotero-types"],
+      "automerge": true,
       "schedule": ["at any time"]
     }
   ],
