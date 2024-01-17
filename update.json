@@ -1,10 +1,10 @@
 {
   "addons": {
-    "addontemplate@euclpts.com": {
+    "addonID@northword.cn": {
       "updates": [
         {
           "version": "2.0.13",
-          "update_link": "https://github.com/northword/zotero-addon-test/releases/latest/download/zotero-addon-test.xpi",
+          "update_link": "https://github.com//release/download/v2.0.13/zotero-addon-test.xpi",
           "applications": {
             "zotero": {
               "strict_min_version": "6.999"
