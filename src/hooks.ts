@@ -5,7 +5,7 @@ import {
   PromptExampleFactory,
   UIExampleFactory,
 } from "./modules/examples";
-import { config } from "../package.json";
+// import { config } from "../package.json";
 import { getString, initLocale } from "./utils/locale";
 import { registerPrefsScripts } from "./modules/preferenceScript";
 import { createZToolkit } from "./utils/ztoolkit";
@@ -20,8 +20,8 @@ async function onStartup() {
   // TODO: Remove this after zotero#3387 is merged
   if (__env__ === "development") {
     // Keep in sync with the scripts/startup.mjs
-    const loadDevToolWhen = `Plugin ${config.addonID} startup`;
-    ztoolkit.log(loadDevToolWhen);
+    // const loadDevToolWhen = `Plugin ${config.addonID} startup`;
+    // ztoolkit.log(loadDevToolWhen);
   }
 
   initLocale();
