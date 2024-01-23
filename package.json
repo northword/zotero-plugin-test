@@ -1,9 +1,9 @@
 {
   "name": "zotero-addon-test",
-  "version": "2.0.13",
+  "version": "2.0.21",
   "description": "Zotero Addon Template",
   "config": {
-    "addonName": "Zotero Addon test",
+    "addonName000": "Zotero Addon test",
     "addonID": "addontemplate@euclpts.com",
     "addonRef": "addontemplate",
     "addonInstance": "AddonTemplate",
@@ -15,7 +15,7 @@
   "type": "module",
   "scripts": {
     "start": "zotero-plugin server",
-    "build": "tsc && zotero-plugin build",
+    "build": "tsc --noEmit && zotero-plugin build",
     "lint": "prettier --write . && eslint . --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "release-it --only-version --preReleaseId=beta",
@@ -113,24 +113,5 @@
         }
       }
     ]
-  },
-  "release-it": {
-    "git": {
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": false
-    },
-    "github": {
-      "release": false,
-      "assets": [
-        "build/*.xpi"
-      ]
-    },
-    "hooks": {
-      "before:init": "npm run lint",
-      "after:bump": "npm run build",
-      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
-    }
   }
 }

@@ -3,8 +3,8 @@
     "addonID@northword.cn": {
       "updates": [
         {
-          "version": "2.0.13",
-          "update_link": "https://github.com//release/download/v2.0.13/zotero-addon-test.xpi",
+          "version": "2.0.20",
+          "update_link": "/release/download/v2.0.20/zotero-addon-test.xpi",
           "applications": {
             "zotero": {
               "strict_min_version": "6.999"
