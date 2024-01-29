@@ -35,10 +35,9 @@ jobs:
         run: |
           echo "public-hoist-pattern[]=@types*" >> .npmrc
           pnpm install
-          rm .npmrc
       - name: Release to GitHub
         run: |
-          pnpm release 
+          pnpm release --no-increment --no-git --github.release --ci --VV
           sleep 1s
       - name: Notify release
         uses: apexskier/github-release-commenter@v1
