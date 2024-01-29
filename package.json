@@ -3,18 +3,16 @@
   "version": "2.0.21",
   "description": "Zotero Addon Template",
   "config": {
-    "addonName000": "Zotero Addon test",
+    "addonName": "Zotero Addon test",
     "addonID": "addontemplate@euclpts.com",
     "addonRef": "addontemplate",
     "addonInstance": "AddonTemplate",
-    "prefsPrefix": "extensions.zotero.addontemplate",
-    "releasePage": "https://github.com/northword/zotero-addon-test/releases",
-    "updateJSON": "https://raw.githubusercontent.com/northword/zotero-addon-test/main/update.json"
+    "prefsPrefix": "extensions.zotero.addontemplate"
   },
   "main": "src/index.ts",
   "type": "module",
   "scripts": {
-    "start": "zotero-plugin server",
+    "start": "zotero-plugin serve",
     "build": "tsc --noEmit && zotero-plugin build",
     "lint": "prettier --write . && eslint . --ext .ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,14 +21,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/northword/zotero-addon-test.git"
+    "url": "git+https://github.com/northword/zotero-plugin-test.git"
   },
   "author": "northword",
   "license": "AGPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/northword/zotero-addon-test/issues"
+    "url": "https://github.com/northword/zotero-plugin-test/issues"
   },
-  "homepage": "https://github.com/northword/zotero-addon-test#readme",
+  "homepage": "https://github.com/northword/zotero-plugin-test#readme",
   "dependencies": {
     "zotero-plugin-toolkit": "2.3.15"
   },
@@ -38,17 +36,12 @@
     "@types/node": "20.10.4",
     "@typescript-eslint/eslint-plugin": "6.14.0",
     "@typescript-eslint/parser": "6.14.0",
-    "chokidar": "3.5.3",
-    "compressing": "1.10.0",
-    "esbuild": "0.19.9",
     "eslint": "8.55.0",
     "eslint-config-prettier": "^9.1.0",
-    "issue-parser": "6.0.0",
     "prettier": "3.1.1",
-    "release-it": "17.0.1",
-    "replace-in-file": "7.0.2",
     "typescript": "5.3.3",
-    "zotero-types": "^1.3.10"
+    "zotero-plugin-scaffold": "^0.0.5",
+    "zotero-types": "^1.3.18"
   },
   "eslintConfig": {
     "env": {
