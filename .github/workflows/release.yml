@@ -36,6 +36,10 @@ jobs:
           echo "public-hoist-pattern[]=@types*" >> .npmrc
           pnpm install
           rm .npmrc
+
+      - name: Build
+        run: pnpm build
+
       - name: Release to GitHub
         run: |
           pnpm release 
