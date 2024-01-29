@@ -6,8 +6,8 @@ export default defineConfig({
   assets: ["addon/**/*.*", "src/**/*.*", "!src/**/*.ts"],
 
   extraBuilder: (options) => {
-    // console.log(JSON.stringify(options, null, 2));
+    console.log(JSON.stringify(options, null, 2));
   },
 
-  logLevel: "info",
+  logLevel: "debug",
 });
