@@ -15,8 +15,8 @@
     "start": "zotero-plugin serve",
     "build": "tsc --noEmit && zotero-plugin build",
     "lint": "prettier --write . && eslint . --ext .ts --fix",
+    "release": "zotero-plugin release",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "release-it --only-version --preReleaseId=beta",
     "update-deps": "npm update --save"
   },
   "repository": {
