@@ -1,24 +1,53 @@
 import { defineConfig } from "zotero-plugin-scaffold";
+import pkg from "./package.json";
+import { copyFileSync } from "fs";
 
 export default defineConfig({
   source: ["src", "addon"],
   dist: "build",
-  assets: ["addon/**/*.*"],
-  esbuildOptions: [
-    {
-      entryPoints: ["src/index.ts"],
-      define: {
-        __env__: `"${process.env.NODE_ENV}"`,
-      },
-      bundle: true,
-      target: "firefox102",
-      outfile: "build/addon/chrome/content/scripts/addontemplate.js",
+  name: pkg.config.addonName,
+  id: pkg.config.addonID,
+  namespace: pkg.config.addonRef,
+  updateURL: `https://raw.githubusercontent.com/{{owner}}/{{repo}}/main/${
+    pkg.version.includes("-") ? "update-beta.json" : "update.json"
+  }`,
+  xpiDownloadLink:
+    "https://github.com/{{owner}}/{{repo}}/releases/download/v{{version}}/{{xpiName}}.xpi",
+
+  build: {
+    assets: ["addon/**/*.*"],
+    define: {
+      addonName: pkg.config.addonName,
+      addonID: pkg.config.addonID,
+      addonRef: pkg.config.addonRef,
+      addonInstance: pkg.config.addonInstance,
+      prefsPrefix: pkg.config.prefsPrefix,
+      author: pkg.author,
+      description: pkg.description,
+      homepage: pkg.homepage,
+      buildVersion: pkg.version,
+      buildTime: "{{buildTime}}",
     },
-  ],
-
-  extraBuilder: (options) => {
-    console.log(JSON.stringify(options, null, 2));
+    esbuildOptions: [
+      {
+        entryPoints: ["src/index.ts"],
+        define: {
+          __env__: `"${process.env.NODE_ENV}"`,
+        },
+        bundle: true,
+        target: "firefox102",
+        outfile: `build/addon/chrome/content/scripts/${pkg.config.addonRef}.js`,
+      },
+    ],
+    // makeUpdateJson: {
+    //   hash: false,
+    // },
+    // hooks: {
+    //   "build:makeUpdateJSON": (ctx) => {
+    //     copyFileSync("build/update.json", "update.json");
+    //     copyFileSync("build/update-beta.json", "update-beta.json");
+    //   },
+    // },
   },
-
-  logLevel: "debug",
+  logLevel: "trace",
 });
