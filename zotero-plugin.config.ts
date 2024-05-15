@@ -11,17 +11,11 @@ export default defineConfig({
   updateURL: `https://raw.githubusercontent.com/{{owner}}/{{repo}}/main/${
     pkg.version.includes("-") ? "update-beta.json" : "update.json"
   }`,
-  xpiDownloadLink:
-    "https://github.com/{{owner}}/{{repo}}/releases/download/v{{version}}/{{xpiName}}.xpi",
 
   build: {
     assets: ["addon/**/*.*"],
     define: {
-      addonName: pkg.config.addonName,
-      addonID: pkg.config.addonID,
-      addonRef: pkg.config.addonRef,
-      addonInstance: pkg.config.addonInstance,
-      prefsPrefix: pkg.config.prefsPrefix,
+      ...pkg.config,
       author: pkg.author,
       description: pkg.description,
       homepage: pkg.homepage,
