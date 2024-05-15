@@ -1,6 +1,6 @@
 {
   "name": "zotero-addon-template",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Zotero Addon Template",
   "config": {
     "addonName": "Zotero Addon Template",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/windingwind/zotero-addon-template.git"
+    "url": "git+https://github.com/northword/zotero-plugin-test-release.git"
   },
   "author": "windingwind",
   "bugs": {
