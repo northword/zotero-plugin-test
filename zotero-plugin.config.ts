@@ -49,7 +49,7 @@ export default defineConfig({
   },
   release: {
     bumpp: {
-      // execute: "npm run build",
+      execute: "npm run build",
     },
     github: {
       enable: "local",
