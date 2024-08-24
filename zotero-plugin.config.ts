@@ -15,7 +15,7 @@ export default defineConfig({
     "https://github.com/{{owner}}/{{repo}}/releases/download/v{{version}}/{{xpiName}}.xpi",
 
   server: {
-    asProxy: true,
+    // asProxy: true,
   },
 
   build: {
@@ -52,7 +52,7 @@ export default defineConfig({
   },
   release: {
     bumpp: {
-      execute: "npm run build",
+      // execute: "npm run build",
     },
     github: {
       enable: "local",
@@ -60,5 +60,5 @@ export default defineConfig({
   },
 
   // If you need to see a more detailed build log, uncomment the following line:
-  logLevel: "trace",
+  // logLevel: "trace",
 });
