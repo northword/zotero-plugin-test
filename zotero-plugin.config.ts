@@ -49,9 +49,13 @@ export default defineConfig({
   },
   release: {
     bumpp: {
-      execute: "npm run build",
+      // execute: "npm run build",
     },
+    changelog: "conventional-changelog",
     github: {
+      enable: "local",
+    },
+    gitee: {
       enable: "local",
     },
   },
