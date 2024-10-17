@@ -54,6 +54,14 @@ export default defineConfig({
     changelog: "conventional-changelog",
     github: {
       enable: "local",
+      releaseNote(ctx) {
+        let notes = `## What's changed  \n\n`;
+        notes += `${ctx.release.changelog}  \n\n`;
+        notes += `## Notes  \n\n`;
+        notes += `Historical Changelog: [CHANGELOG.md](https://github.com/northword/zotero-format-metadata/blob/main/CHANGELOG.md).  \n\n`;
+        notes += `![GitHub release (by tag)](https://img.shields.io/github/downloads/${ctx.release.github.repository}/${ctx.release.bumpp.tag}/total)  \n\n`;
+        return notes;
+      },
     },
     gitee: {
       enable: "local",
