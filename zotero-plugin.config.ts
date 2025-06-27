@@ -43,5 +43,5 @@ export default defineConfig({
     //   },
     // },
   },
-  logLevel: "trace",
+  logLevel: "TRACE",
 });
