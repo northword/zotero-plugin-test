@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/northword/zotero-plugin-test#readme",
   "dependencies": {
-    "zotero-plugin-toolkit": "2.3.15"
+    "zotero-plugin-toolkit": "5.0.1"
   },
   "devDependencies": {
     "@types/node": "20.10.4",
